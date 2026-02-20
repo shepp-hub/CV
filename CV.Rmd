@@ -1,14 +1,14 @@
 ---
-name: Mitchell O'Hara-Wild
+name: Guy Shapira
 date: "`r format(Sys.time(), '%B, %Y')`"
-qualifications: BCom(Hons), BSc
-position: Data Scientist
-address: Melbourne, Australia
-email: mail@mitchelloharawild.com
-website: mitchelloharawild.com
-github: mitchelloharawild
-linkedin: mitchelloharawild
-headcolor: "414141"
+qualifications: PhD candidate
+position: Data Scientist, AI and Bioinformatics researcher
+email: guyspersonal@gmail.com
+address: " "
+website: me.shepp.co
+github: shepp-hub
+linkedin: guyshapira
+headcolor: "303030"
 output: 
   vitae::awesomecv:
     keep_tex: true
@@ -20,311 +20,91 @@ library(vitae)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Current work
+
+
+# Employment
+
+
 
 ```{r consulting}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-  "PhD Candidate", "Monash University", "Clayton, Australia", "Feb. 2023 - Present", 
-    list("Research in statistical software for time series analysis and probabilistic forecasting at scale.",
-         "Key research topics include graph-based forecast reconciliation, coherent pruning of aggregation structures, and time-series visualisation",
-         "Underpinning this research are the R packages distributional, graphvec, and mixtime which provide vector-based data structures for distributions, graphs, and time."),
-  "Founder & Data Scientist", "Nectric", "Melbourne, Australia", "Jan. 2019 - Present", 
-    list("Data science consulting projects including spatio-temporal modelling, and large scale forecasting.",
-         "Development of interactive web applications using Shiny for R.",
-         "Hosting workshops improving data literacy, development, analysis and modelling capabilities."
+  "Director of Computation", "Everly Bio", "2024 - Present", "", 
+    list("Developing a novel diagnostic AI model for fertility issues",
+         "Responsible for all computation, from bioinformatic analysis to cloud orchestration"
+         ),
+  "Researcher, Student, Graduate teaching assistant", "Tel Aviv University", "2016 - 2026", "", 
+    list("Active academic research, starting as an undergraduate and continuing as a PhD graduate",
+         "Credited for 60 scientific publications in 6 years, with over 780 citations (at the time of writing)",
+         "Filed two patents for technology transfer based on research findings",
+         "Graduate teaching assistant for 4 semesters, 2018-2020"
     ),
-  "Statistician", "Australia-Aotearoa Consortium for Epidemic Forecasting & Analytics (ACEFA)", "Australia", "Aug. 2020 - Present", 
-    list("ACEFA provides situational assessment for public health officials in Australia and New Zealand about epidemic diseases.",
-         "I lead the evaluation and ensembling of component forecasts of Influenza, RSV, and COVID-19.",
-         "Recently I have been developing new interactive platforms for stakeholders to engage with and better understand the forecasts."
+  "Statistical advisor", "ExoNavis Therapeutics", "2025 - Present", "", 
+    list("Statistical analysis of clinical data, FDA standard complience"),
+  "Full-stack developer", "Gotsho Ltd.", "2018 - 2019", "", 
+    list("Developed a computational framework for Laboratory Information Management Systems (LIMS)"
     ),
-  "Technical Editor", "R Journal", "Online", "Jan. 2024 - Present", 
-    list("The publishing and deployment of articles and issues for the R Journal.",
-         "Maintenance and development of R Journal software, including rjtools, rjdistill, and rj.",
-         "Created software for managing submitted articles and publishing them in both interactive HTML and static PDF."
-    ),
-  "Research Assistant", "Monash University", "Clayton, Australia", "Oct. 2015 - Present", 
-    list("Primarily working as a research software engineer creating R packages for time series forecasting techniques.",
-         "Other work involves consulting on large scale time series forecasting and cross-sectional modelling.",
-         "Consulting project clients include: Doherty Institute, Huawei, Monash University, R Consortium, and the NSW Chief Scientist office."),
-  "Teaching Associate", "Monash University", "Clayton, Australia", "Mar. 2016 - Present", "Sessional teaching of university students undertaking Bachelor's and Master's degrees.",
-  # "Data mining intern", "iSelect", "Cheltenham, Australia", "Feb. 2015 - Mar. 2015", "Improved business reporting with interactive visualisations, and model-based anomaly detection.",
+  "Information Technology Developer", "Human Impact", "2014 - 2016", "", 
+    list("Family-owned business"
+    )
 ) %>% 
   detailed_entries(role, dates, company, loc, details)
 ```
 
+
+
 # Qualifications
+
+
 
 ```{r education}
 tribble(
-  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
-  "BCom (Hons) in Econometrics", "Monash University", "Clayton, Australia", "Mar. 2017 - Nov. 2017", 
-    list("Recipient of the Econometrics Honours Memorial Scholarship, Dean's Honour, Dean's Commendation, and best in class for 5 units.",
-         "Honours research project was to develop a state space model for quickly forecasting time series with multiple seasonalities.",
-         "Studied units include Bayesian and frequentist econometrics, advanced statistical modelling and computational science."),
-  "BCom & BSc (majoring in Econometrics, Mathematical Statistics, and Computational Science)", "Monash University", "Clayton, Australia", "Mar. 2013 - Nov. 2016", 
-    list("Recipient of the Monash Community Leaders Scholarship, International Institute of Forecasters Award, and best in class for 4 units.",
-         "Mentor for the Access Monash Ambassador Program (2015 and 2016)",
-         "Participant of the Vice-Chancellor's Ancora Imparo Student Leadership Program (2014)",
-         "Each of the three disciplines I majored in provided different perspectives for working with data.")
-) %>% 
-  detailed_entries(degree, dates, uni, loc, details)
-```
-
-\newpage
-
-# Academic contributions
-
-## Current Research Areas
-
-\begin{cvparagraph}
-The primary research area of my PhD relates to tools and techniques for large-scale time series analysis and forecasting. Large collections of time series are usually structurally related, whereby series of interest are constructed by aggregating other time series. Independent forecasts of these series are adjusted using forecast reconciliation to maintain the aggregation structure. My research extends time series aggregation and forecast reconciliation methods to support arbitrary aggregations using graphs. This work enables non-linear aggregation constraints, cross-temporal reconciliation of sub-daily data, and pruning noisy time series from large coherent time series.
-
-A substantial element in this research is the design of statistical software. Large-scale forecasting involves many different data types beyond time itself. My recent research has focused on developing vectorised data structures for these data types, including distributional (for forecast distributions), mixtime (for temporal aggregation), and graphvec (for representing aggregation relationships). To improve exploratory time series analysis tools, I have also been working on the grammar of temporal graphics and ggtime, which leverages mixtime for better time-series visualisation.
-
-Unrelated to my PhD, I have also been developing scalable teaching tools for self-paced e-learning. This includes moodlequiz for creating Moodle quizzes with literature programming, and online learning modules with programming exercises using webr and qlcheckr. I have also recently been experimenting with using LLMs for exploring and cleaning unstructured data.
-
-\end{cvparagraph}
-
-## Software
-
-\begin{cvparagraph}
-My primary research output is the translation of academic research into open source software packages. The software primarily relates to time series forecasting, literate programming, and data visualisation. Some more notable software packages are listed below.
-\end{cvparagraph}
-
-```{r r-pkgs, include = TRUE}
-tribble(
   ~ pkg, ~ when, ~ role, ~ details,
-  "ggtime", "2025", "Lead developer", "Extends ggplot2 with a grammer of temporal graphics.",
-  "mixtime", "2025", "Lead developer", "Vectorised and extensible time classes.",
-  "graphvec", "2025", "Lead developer", "Vectorised graph nodes and edges.",
-  "vecvec", "2025", "Lead developer", "Vectors of vctrs for efficient storage of mixed vector types.",
-  "fromhere", "2025", "Lead developer", "Relative file paths from different places, a declarative version of the here package.",
-  # "symbolic", "2024", "Lead developer", "Alternative computer algebra system interface to yacas from R.",
-  "rjtools", "2022", "Lead developer", "Tools and templates for publishing articles to the R Journal.",
-  "gghdr", "2022", "Author", "Extends ggplot2 with plot types for visualising highest density regions.",
-  "distributional", "2020", "Lead developer", "Vectorised distribution objects with methods for manipulating and computing on probability distributions.",
-  "fable", "2019", "Lead developer", "A collection of time series models for use in a tidyverse workflow.",
-  # "fable.prophet", "2019", "Lead developer", "Extension package implementing the prophet forecasting procedure for fable.",
-  "feasts", "2019", "Lead developer", "A collection of features, decompositions, statistics and graphics tools for the analysing tidy time series data.",
-  "fabletools", "2019", "Lead developer", "Provides common utilities for the fable forecasting framework, allows users to extend fable with new models.",
-  "tsibbledata", "2019", "Lead developer", "Diverse datasets in a tidy time series data structure (tsibble). Useful in examples of tidy time series analysis.",
-  # "tsfeatures", "2019", "Author", "Various methods for extracting features from time series data.",
-  "tsibble", "2018", "Contributor", "Tidy temporal data structures and tools. The data for the tidy time series collection of packages.",
-  "vitae", "2018", "Lead developer", "Dynamically generate a Résumé or CV using R Markdown. This CV is created using code with that package!",
-  # "cransays", "2018", "Author", "Provides a dashboard and historical data for R packages being reviewed by CRAN.",
-  "taipan", "2018", "Lead developer", "Generates shiny apps for annotating image data, which is useful for training machine learning models.",
-  "fasster", "2017", "Lead developer", "Implementation of the FASSTER model for forecasting complex multiple seasonal patterns.",
-  "icons", "2017", "Lead developer", "Embed SVG icons in R documents such as slides, reports and apps.",
-  "ggquiver", "2017", "Lead developer", "Extends ggplot2 for displaying vector fields on plots.",
-  "forecast", "2015", "Author", "Methods and tools analysing univariate time series data and producing model-based forecasts."
+  "Doctor of Philosophy", "2021-2026", "Tel Aviv University", "Biomedical Sciences",
+  "Master of Science", "2018-2020", "Tel Aviv University", "Biomedical Sciences",
+  "Bachelor of Science", "2014-2017", "Tel Aviv University", "Biology"
 ) %>% 
   brief_entries(glue::glue("\\textbf{<pkg>}: <role> \\newline <details>", .open = "<", .close = ">"), paste0(when, "\\newline"), .protect = FALSE)
 ```
 
-<!-- ## Academic research -->
 
-<!-- fasster, taipan, fable -->
 \newpage
 
-## Presentations
+# Achievements & Awards
 
-```{r talks}
+```{r}
 tribble(
-  ~ when, ~ title, ~ details, ~ where, ~ url,
-  "2025", "Vectorised Statistics with Composite Data Types", "Mixed-type semantic vectors and statistics.", "ASC", "https://slides.mitchelloharawild.com/asc2025/",
-  # "2025", "Accessible and extensible design for statistical computing on distributions", "How design democratises statistical computing.", "RSAA", "https://slides.mitchelloharawild.com/rsaa25/",
-  "2025", "Visualizing time with ggtime’s grammar of temporal graphics", "Better time series visualisation tools.", "useR!", "https://slides.mitchelloharawild.com/user2025/",
-  "2025", "ggtime: Visualizing time with a grammar of temporal graphics", "Extending ggplot2 with ggtime.", "JSM", "https://slides.mitchelloharawild.com/jsm2025/",
-  "2025", "Calendar-based exploratory time series analysis", "Composable time vectors and visualisation tools.", "ISF", "https://slides.mitchelloharawild.com/isf2025/",
-  "2025", "Designing extensible forecasting frameworks", "Creating tidy forecasting systems and tools.", "IIF OSF", "https://slides.mitchelloharawild.com/iif-osf/",
-  "2025", "Probabilistic forecast combinations", "Introduction to ensemble, decomposition, and coherent forecasting.", "ACEFA Launch", "https://slides.mitchelloharawild.com/acefa-launch/",
-  "2025", "Designing ggtime: A grammar of temporal graphics", "A discussion about ggplot2 extension design.", "ggplot extension club", "https://slides.mitchelloharawild.com/ggextenders-ggtime/",
-  "2024", "Scalable self-paced e-learning with automated feedback", "Using e-learning for teaching at scale.", "WOMBAT", "https://slides.mitchelloharawild.com/wombat2024/",
-  "2024", "Statistical computing with vectorised operations on distributions", "Introducing distributional for R.", "useR!", "https://slides.mitchelloharawild.com/user2024/",
-  "2024", "Feature based graph pruning for improved forecast reconciliation", "Coherent large scale forecasting.", "ISF", "https://slides.mitchelloharawild.com/pruning-graphs/",
-  "2023", "Creating flexible e-learning quizzes with literate programming", "Literate programming Moodle quizzes.", "NYR", "https://slides.mitchelloharawild.com/moodlequiz/",
-  "2023", "From forecast to fable, design decisions for statistical software", "Design changes from forecast to fable.", "NYR", "https://slides.mitchelloharawild.com/nyr2023/",
-  "2023", "Reconciliation of structured time series forecasts with graphs", "Coherent forecasting with graphs.", "ISF", "https://slides.mitchelloharawild.com/reconciling-graphs/",
-  # "2023", "The design of statistical software", "Discussion about design principles of user interfaces for statistics.", "NUMBAT Seminar", "https://slides.mitchelloharawild.com/statistical-software-design/",
-  "2020", "Forecasting with multiple seasonality", "Methods and techniques to multiple seasonal forecasting in R", "UK NHS", "https://slides.mitchelloharawild.com/nhs2020/",
-  "2020", "Probabilistic cross-temporal hierarchies", "Recent developments of temporal reconciliation in fable.", "ISF", "https://slides.mitchelloharawild.com/isf2020/",
-  # "2019", "Flexible futures for fable functionality", "Introduction to extensible tidy forecasting with fable.", "MelbURN meetup", "https://slides.mitchelloharawild.com/fable-tfeam/",
-  "2019", "Flexible futures for fable functionality", "Reconciled forecasting of time series with model combinations.", "ISF", "https://slides.mitchelloharawild.com/isf2019/",
-  # "2018", "Tidy forecasting in R", "Discussion of recent developments to the fable framework.", "MelbURN meetup", "https://slides.mitchelloharawild.com/fable-tfeam/",
-  "2018", "Forecasting multiple seasonality with state switching", "The FASSTER model with the fable framework.", "useR!", "https://slides.mitchelloharawild.com/user2018",
-  "2017", "Models for forecasting multiple seasonality", "An introduction to the FASSTER model.", "MelbURN meetup", "https://slides.mitchelloharawild.com/melburn17/",
-) %>% 
-  brief_entries(glue::glue("\\textbf{<title>}: <details> \\newline \\url{<url>}", .open = "<", .close = ">"), when, .protect = FALSE)
+  ~ pkg, ~ details, ~ when,
+  "Scholarship for Outstanding Research Students", "The Center for Combating Pandemics", "2023",
+  "Scholarship for Outstanding Research Students", "Pfizer-Wexler foundation for development and progress", "2023",
+  "Fellowship and scholarship", "Edmond J. Safra Center for Bioinformatics", "2022",
+  "Academic excellence scholarship", "The Aufzien Family Center for the Prevention and Treatment of Parkinson’s", "2021",
+  "Award winning study", "Ziva and Chanoch Finklestein research fund", "2021",
+  "Research grant", "The Aufzien Family Center for the Prevention and Treatment of Parkinson's Disease (APPD)", "2020",
+  "Research grant", "Adams Super Center for Brain Studies, TAU", "2020"
+) %>%
+  brief_entries(glue::glue("\\textbf{<pkg>}\\newline <details>", .open = "<", .close = ">"), paste0(when, "\\newline"), .protect = FALSE)
 ```
 
-## Publications
+
+# Academic contributions
+
+## Involvement and attendence
+
+- Member of the organizing committee of the Edmond J. Safra Center Biomedical Informatics Entrepreneurs Salon - A bi-monthly forum to promote entrepreneurship at the convergence of biology, medicine, and computing.
+
+- Attended Edmond J. Safra Center for Bioinformatics annual retreat (several years)
+
+- Attended Federation of European Neuroscience Societies (FENS) Forum 2022, Paris, France.
+
+- Attended Human Genome Meeting (HGM) 2020, Perth Australia.
+
+- Attended Computational Genomics Summer Institute (CGSI) 2019 at UCLA.
+
+
+## Scientific Publications
 
 ```{r}
 bibliography_entries("publications.bib")
 ```
 
-\newpage
-
-<!-- # Data analysis projects -->
-
-<!-- # Related interests -->
-<!-- * Home automation -->
-<!-- * Beekeeping -->
-<!-- * Permaculture -->
-<!-- * Electronics design -->
-<!-- * Woodworking -->
-
-<!-- # Relevant Skills -->
-<!-- ```{r} -->
-<!-- cvskill("Data Analysis", c("Visualisation", "Data Cleaning", "Forecasting", "Modelling", "Communication", "Inference", "Machine Learning", "Web Scraping")) -->
-<!-- cvskill("Programming", c("R", "Python", "SQL", "Java", "C", "C++", "HTML/CSS", "TeX", "MATLAB")) -->
-<!-- ``` -->
-
-# Teaching experience
-
-## University teaching
-
-\begin{cvparagraph}
-I have 10 years of teaching experience at Monash University, mostly teaching applied forecasting, statistical modelling, and data analysis skills. My teaching has been consistently recognised with positive student evaluations and individual praise from my students, with 13 congratulatory letters for outstanding student evaluations (units in top 5\%). I am currently co-lecturing Applied Forecasting and Advanced R Programming.
-\end{cvparagraph}
-
-```{r tutoring}
-tribble(
-  ~ title, ~ code, ~ campus, ~ semester, ~ purple,
-  "Advanced R Programming", "ETC4500/ETC5450", "Clayton", "2024-2025", TRUE,
-  "Applied Forecasting", "ETC3550/ETC5550", "Clayton", "2019-2025", TRUE,
-  "Communicating with Data", "ETC5523", "Clayton", "2020-2021", FALSE,
-  "Advanced Statistical Modelling", "ETC3580", "Clayton", "2018-2019", TRUE,
-  "Data Modelling and Computing", "ETC1010", "Clayton", "2017-2019", FALSE,
-  "Mathematics for Business", "ETF2700", "Caulfield", "2016", FALSE,
-  "Business Forecasting", "ETF3231/ETF5231", "Caulfield", "2016-2018", TRUE,
-) %>%
-  brief_entries(glue::glue("\\textbf{<code>}: <title> (Monash <campus>)", .open = "<", .close = ">"), semester, .protect = FALSE)
-```
-
-<!-- ```{r tutoring} -->
-<!-- tribble( -->
-<!--   ~ title, ~ code, ~ campus, ~ semester, ~ purple, -->
-<!--   "Advanced R Programming", "ETC4500/ETC5450", "Clayton", "2025 S1", TRUE, -->
-<!--   "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2025 S1", TRUE, -->
-<!--   "Advanced R Programming", "ETC4500/ETC5450", "Clayton", "2024 S1", TRUE, -->
-<!--   "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2024 S1", TRUE, -->
-<!--   "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2023 S1", TRUE, -->
-<!--   "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2022 S1", TRUE, -->
-<!--   "Communicating with Data", "ETC5523", "Clayton", "2021 S2", FALSE, -->
-<!--   "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2021 S1", TRUE, -->
-<!--   "Communicating with Data", "ETC5523", "Clayton", "2020 S2", TRUE, -->
-<!--   "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2020 S1", TRUE, -->
-<!--   "Advanced statistical modelling", "ETC3580", "Clayton", "2019 S2", TRUE, -->
-<!--   "Data modelling and computing", "ETC1010", "Clayton", "2019 S2", FALSE, -->
-<!--   "Data modelling and computing", "ETC1010", "Clayton", "2019 S1", FALSE, -->
-<!--   "Applied forecasting for business and economics", "ETC3550/ETC5550", "Clayton", "2019 S1", TRUE, -->
-<!--   "Data modelling and computing", "ETC1010", "Clayton", "2018 S2", FALSE, -->
-<!--   "Advanced statistical modelling", "ETC3580", "Clayton", "2018 S2", TRUE, -->
-<!--   "Business forecasting", "ETF3231/ETF5231", "Caulfield", "2018 S1", TRUE, -->
-<!--   "Data modelling and computing", "ETC1010", "Clayton", "2017 S2", FALSE, -->
-<!--   "Business forecasting", "ETF3231/ETF5231", "Caulfield", "2017 S1", FALSE, -->
-<!--   "Mathematics for business", "ETF2700", "Caulfield", "2016 S2", FALSE, -->
-<!--   "Business forecasting", "ETF3231/ETF5231", "Caulfield", "2016 S1", FALSE -->
-<!-- ) %>%  -->
-<!--   brief_entries(glue::glue("\\textbf{<code>}: <title> (Monash <campus>)", .open = "<", .close = ">"), semester, .protect = FALSE) -->
-<!-- ``` -->
-
-## Workshops and trainings
-
-\begin{cvparagraph}
-In addition to on-campus teaching, I also teach data analysis workshops to people of all backgrounds around the world.
-\end{cvparagraph}
-
-```{r workshops}
-tribble(
-  ~ role, ~ course, ~ organisation, ~ country, ~ dates, ~ details,
-  # "Instructor", "Tidy time series analysis and forecasting", "WOMBAT", "Australia", "Sep. 2025", "Half-day workshop on time series forecasting with the fable package.",
-  "Instructor", "Exploratory time series analysis", "ISF", "Online", "June 2025", "Half-day workshop on visually exploring tidy time series data.",
-  "Instructor", "Tidy time series analysis and forecasting", "SSA", "Online", "May 2025", "Half-day workshop on time series forecasting with the fable package.",
-  "Instructor", "Advanced R Tips and Tricks", "WOMBAT", "Australia", "Oct. 2024", "Half-day workshop on advanced R programming.",
-  "Instructor", "Interactive web applications with Shiny for R", "WOMBAT", "Australia", "Oct. 2024", "Half-day workshop on creating interactive web applications in R using Shiny.",
-  "Instructor", "Tidy Time Series and Forecasting in R", "Dept. Edu", "Australia", "Oct. 2023", "Two day workshop on forecasting using tidy forecasting tools in R.",
-  "Instructor", "AFRICAST: Tidy forecasting for social good", "F4SG", "Online", "Sept. 2024", "Five day workshop on forecasting for 181 students from 32 Sub-Saharan African countries.",
-  "Instructor", "Tidy time series analysis and forecasting", "useR!", "Austria", "July  2024", "Quick-start workshop for tidy forecasting in R.",
-  "Instructor", "Tidy time series \\& forecasting in R", "UM6P", "Morocco", "June  2024", "Two day workshop on forecasting using tidy forecasting tools in R.",
-  "Instructor", "Tidy time series analysis and forecasting", "R/Medicine", "Online", "Jun. 2024", "Quick-start workshop for tidy forecasting in R.",
-  "Instructor", "Interactive web applications with Shiny for R", "SSA", "Online", "Dec. 2023", "3-hour online quick-start workshop for the basics of Shiny.",
-  "Instructor", "AFRICAST: Tidy forecasting for social good", "F4SG", "Online", "Oct. 2023", "Five day workshop on forecasting for 62 students from 9 Sub-Saharan African countries.",
-  "Instructor", "Tidy Time Series and Forecasting in R", "NYR", "USA", "July 2023", "Two day workshop on forecasting using tidy forecasting tools in R.",
-  "Instructor", "Interactive web applications with Shiny", "WOMBAT", "Australia", "Dec. 2022", "Half-day workshop on the basics of shiny applications.",
-  "Teaching assistant", "Tidy Time Series and Forecasting in R", "rstudio::conf", "USA", "Jan. 2020", "Two day workshop with Rob Hyndman on forecasting using tidyverse workflows.",
-  "Instructor", "Interactive documents with Shiny", "CSIRO", "Australia", "Nov. 2019", "Two day intermediate workshop on developing of shiny applications.",
-  "Instructor", "Data Wrangling", "Monash University", "Australia", "Sep. 2019", "A short workshop in the 'R Workshops for Beginners' series on using tidyr and dplyr to wrangle data.",
-  "Helper", "Tidyverse developer day", "RStudio", "France", "July 2019", "A one day developer day where I helped R users resolve issues on tidyverse packages.",
-  "Teaching assistant", "High-dimensional time series analysis", "ISI WSC", "Malaysia", "Aug. 2019", "One day short course with Rob Hyndman for analysing and forecasting large collections of time series.",
-  "Instructor", "The grammar of animation", "Monash University", "Australia", "Mar. 2019", "A short workshop for NUMBAT group on creating animated graphics in R with the gganimate package.",
-  "Teaching assistant", "Master R Developer Workshop", "RStudio", "Australia", "Dec. 2016", "A two day workshop with Hadley Wicham on programming with R and developing R packages.",
-) %>% 
-  brief_entries(glue::glue("\\textbf{<course>}: <role> (<organisation>, <country>) \\newline <details>", .open = "<", .close = ">"), paste0(dates, "\\newline"), .protect = FALSE)
-```
-
-## Supervision and mentoring
-
-```{r supervision}
-
-tribble(
-  ~ what, ~ when, ~ role, ~ details,
-  "Monash Business Analytics", "2025", "Co-supervisor", "Supervised a research project on data cleaning unvalidated values with LLMs.",
-  "Google Summer of Code", "2022-2023", "Co-supervisor", "Supervised the development of the 'texor' R package for converting LaTeX articles to R Markdown.",
-  "Monash Business Analytics", "2022", "Co-supervisor", "Supervised research into hexagonal binning of spatial geometries (common in election visualisation).",
-  "Access Monash", "2015-2016", "Mentor", "Mentored underprivileged high-school students to support their studies and pursuit of career goals."
-) %>% 
-  brief_entries(glue::glue("\\textbf{<what>}: <role> \\newline <details>", .open = "<", .close = ">"), paste0(when, "\\newline"), .protect = FALSE)
-```
-
-# Awards & achievements
-
-## Awards
-
-```{r}
-tribble(
-  ~ award, ~ from, ~ year,
-  "Pitman Prize Honourable Mention", "SSA", "2025",
-  "Student Presentation Award", "ISF", "2023",
-  "Dean's Citation for Outstanding Contribution to Student Learning as a Teaching Associate", "Monash", "2021",
-  "Commerce Dean's Honour", "Monash", "2017",
-  "Commerce Dean's Commendation", "Monash", "2016",
-  "Science Dean's List", "Monash", "2014-2016",
-  "International Institute of Forecasters Award", "IIF", "2014",
-  "Rotary Youth Leadership Award", "Rotary", "2013"
-) %>%
-  brief_entries(award, year, from)
-```
-
-## Scholarships
-
-```{r}
-tribble(
-  ~ scholarship, ~ from, ~ year,
-  "Monash Graduate Excellence Scholarship", "Monash", "2023-2026",
-  "Monash Faculty Scholarship", "Monash", "2023-2026",
-  "Monash Departmental Scholarship", "Monash", "2023-2026",
-  "Econometrics Honours Memorial Scholarship", "Monash", "2017",
-  "Monash Community Leaders Scholarship", "Monash", "2015 & 2016",
-  "Mitcham Rotary Scholarship", "Rotary", "2011 & 2012"
-) %>%
-  brief_entries(scholarship, year, from)
-```
-
-<!-- ## Competitions -->
-<!-- ```{r} -->
-<!-- tribble( -->
-<!--   ~ competition, ~ from, ~ year, -->
-<!--   "UseR! 2018 Datathon Champion", "UseR!", "2018", -->
-<!--   "RMIT SBITL Analytics Competition Champion", "RMIT", "2017", -->
-<!--   "RMIT SBITL Analytics Competition Champion", "RMIT", "2016" -->
-<!-- ) %>% -->
-<!--   brief_entries(competition, year, from) -->
-<!-- ``` -->
-
-<!-- # Personal projects
-
-I am passionate about permaculture and sustainability, a proud keeper of bees and chickens, and grower of fruits, vegetables and mushrooms. I blend my expertise in data analysis and engineering with my love of nature to monitor and maintain the ecosystems I create. My latest project is designing networked sensors for wide-area sampling of the local environment, primarily using ecoacoustics to analyse sounds from birds, trees, bees, and soil. -->
