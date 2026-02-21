@@ -2,9 +2,9 @@
 name: Guy Shapira
 date: "`r format(Sys.time(), '%B, %Y')`"
 qualifications: PhD candidate
-position: Data Scientist, AI and Bioinformatics researcher
+position: Data Scientist, AI and Bioinformatics researcher, PhD candidate
 email: guyspersonal@gmail.com
-address: " "
+address: ""
 website: me.shepp.co
 github: shepp-hub
 linkedin: guyshapira
@@ -21,7 +21,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-
 # Employment
 
 
@@ -30,22 +29,23 @@ knitr::opts_chunk$set(echo = FALSE)
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
   "Director of Computation", "Everly Bio", "2024 - Present", "", 
-    list("Developing a novel diagnostic AI model for fertility issues",
+    list("Developing a novel diagnostic AI model aiding fertility treatments",
          "Responsible for all computation, from bioinformatic analysis to cloud orchestration"
          ),
-  "Researcher, Student, Graduate teaching assistant", "Tel Aviv University", "2016 - 2026", "", 
+  "Researcher, Graduate teaching assistant", "Tel Aviv University", "2016 - Present", "", 
     list("Active academic research, starting as an undergraduate and continuing as a PhD graduate",
          "Credited for 60 scientific publications in 6 years, with over 780 citations (at the time of writing)",
          "Filed two patents for technology transfer based on research findings",
          "Graduate teaching assistant for 4 semesters, 2018-2020"
     ),
   "Statistical advisor", "ExoNavis Therapeutics", "2025 - Present", "", 
-    list("Statistical analysis of clinical data, FDA standard complience"),
+    list("Statistical analysis of clinical trial results, FDA standard complience",
+         "Promoting the approval of a novel treatment for neurodegeneration, which I studied and co-patented"),
   "Full-stack developer", "Gotsho Ltd.", "2018 - 2019", "", 
     list("Developed a computational framework for Laboratory Information Management Systems (LIMS)"
     ),
   "Information Technology Developer", "Human Impact", "2014 - 2016", "", 
-    list("Family-owned business"
+    list("Developed a datamining system for company use"
     )
 ) %>% 
   detailed_entries(role, dates, company, loc, details)
