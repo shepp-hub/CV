@@ -2,7 +2,7 @@
 name: Guy Shapira
 date: "`r format(Sys.time(), '%B, %Y')`"
 qualifications: PhD candidate
-position: Data Scientist, AI and Bioinformatics researcher, PhD candidate
+position: Data Scientist, AI and Bioinformatics researcher
 email: guyspersonal@gmail.com
 address: ""
 website: me.shepp.co
@@ -30,17 +30,19 @@ tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
   "Director of Computation", "Everly Bio", "2024 - Present", "", 
     list("Developing a novel diagnostic AI model aiding fertility treatments",
-         "Responsible for all computation, from bioinformatic analysis to cloud orchestration"
+         "The product enables forecasting the success of an IVF cycle based on a non-invasive, AI-powered test",
+         "Responsible for all computation, from bioinformatic analysis to cloud orchestration",
+         "Involved in recruitment of funding and expanding to foreign markets (US)"
          ),
+  "Statistical advisor", "ExoNavis Therapeutics", "2025 - Present", "", 
+    list("Statistical analysis of clinical trial results, FDA standard complience",
+         "Promoting the approval of a novel treatment for neurodegeneration, which I studied and co-patented"),
   "Researcher, Graduate teaching assistant", "Tel Aviv University", "2016 - Present", "", 
     list("Active academic research, starting as an undergraduate and continuing as a PhD graduate",
          "Credited for 60 scientific publications in 6 years, with over 780 citations (at the time of writing)",
          "Filed two patents for technology transfer based on research findings",
          "Graduate teaching assistant for 4 semesters, 2018-2020"
     ),
-  "Statistical advisor", "ExoNavis Therapeutics", "2025 - Present", "", 
-    list("Statistical analysis of clinical trial results, FDA standard complience",
-         "Promoting the approval of a novel treatment for neurodegeneration, which I studied and co-patented"),
   "Full-stack developer", "Gotsho Ltd.", "2018 - 2019", "", 
     list("Developed a computational framework for Laboratory Information Management Systems (LIMS)"
     ),
@@ -54,7 +56,6 @@ tribble(
 
 
 # Qualifications
-
 
 
 ```{r education}
@@ -93,18 +94,18 @@ tribble(
 
 - Member of the organizing committee of the Edmond J. Safra Center Biomedical Informatics Entrepreneurs Salon - A bi-monthly forum to promote entrepreneurship at the convergence of biology, medicine, and computing.
 
-- Attended Edmond J. Safra Center for Bioinformatics annual retreat (several years)
+- Presented research at Edmond J. Safra Center for Bioinformatics annual retreat (several years)
 
-- Attended Federation of European Neuroscience Societies (FENS) Forum 2022, Paris, France.
+- Presented research at Federation of European Neuroscience Societies (FENS) Forum 2022, Paris, France.
 
-- Attended Human Genome Meeting (HGM) 2020, Perth Australia.
+- Presented research at Human Genome Meeting (HGM) 2020, Perth Australia.
 
-- Attended Computational Genomics Summer Institute (CGSI) 2019 at UCLA.
+- Presented research at Computational Genomics Summer Institute (CGSI) 2019 at UCLA.
 
 
 ## Scientific Publications
 
 ```{r}
-bibliography_entries("publications.bib")
+bibliography_entries("publications.bib") %>% arrange(desc(`issued`))
 ```
 
