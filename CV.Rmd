@@ -39,7 +39,8 @@ tribble(
          "Promoting the approval of a novel treatment for neurodegeneration, which I studied and co-patented"),
   "Researcher, Graduate teaching assistant", "Tel Aviv University", "2016 - Present", "", 
     list("Active academic research, starting as an undergraduate and continuing as a PhD graduate",
-         "Credited for 60 scientific publications in 6 years, with over 780 citations (at the time of writing)",
+         "Published over 40 peer reviewed scientific papers, with over 780 citations (at the time of writing)",
+         "Won multiple awards and scholarships for scientific achievement. Studies featured in several international conferences and mainstream media",
          "Filed two patents for technology transfer based on research findings",
          "Graduate teaching assistant for 4 semesters, 2018-2020"
     ),
@@ -103,9 +104,44 @@ tribble(
 - Presented research at Computational Genomics Summer Institute (CGSI) 2019 at UCLA.
 
 
-## Scientific Publications
-
+## Peer reviewed articles
 ```{r}
-bibliography_entries("publications.bib") %>% arrange(desc(`issued`))
+bdf=bibliography_entries("publications.bib") %>% arrange(`issued`)
+
+# Only journal articles
+df=bdf %>% filter(`type`=="article-journal")
+
+# No pre-prints
+PRE_PRINT_SERVERS=c("bioRxiv", "medRxiv")
+df=df %>% filter((!is.na(`container-title`)) & (!`container-title` %in% PRE_PRINT_SERVERS))
+
+df
 ```
 
+
+## Book chapters
+```{r}
+df=bdf %>% filter(`type`=="chapter")
+df
+```
+
+\newpage
+## Conference abstracts
+```{r}
+df=bdf %>% filter(`type`=="paper-conference")
+df
+```
+
+## Pre-prints
+```{r}
+UNPUBLISHED=c("SARS-CoV-2 evolution and evasion from multiple antibody treatments in a cancer patient")
+df=bdf %>% filter(title %in% UNPUBLISHED)
+df
+```
+
+
+## Patents
+1. Gozes, I., Shapira, G., LOBYNTSEVA, A., KARMON, G., & Shomron, N.. Nap for sex-specific treatment of
+diseases. US Application Pub No. US20250312408A1 (2025). *Pending*
+
+2. Heifetz, Y., IMBAR, T., Shomron, N., Shapira, G., & KOMSKY-ELBAZ, A.. Markers for successful fertilization implantation and pregnancy. Application Pub No. WO2025229648A1 (2025).
